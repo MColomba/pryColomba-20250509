@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,15 @@ namespace pryColomba_20250509
             cmbHeroes.Items.Insert(1, "Batman");
             cmbHeroes.Items.Insert(2, "Wonder Woman");
         }
+        public bool ValidaDatos()
+        {
+            if(cmbHeroes.SelectedIndex == -1)
+            {
+                MessageBox.Show("No selecciono un heroe");
+                return false;
+            }
+            return true;
+        }
 
         private void cmbHeroes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -43,6 +53,17 @@ namespace pryColomba_20250509
                 default:
                     picSimbolo.Image = Resources.error;
                     break;
+            }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            if(ValidaDatos() == true)
+            {
+                StreamWriter Guardar = new StreamWriter("Estadisticas.txt", true);
+                Guardar.WriteLine(cmbHeroes.Text + "," + nudFuerza.Value + "," + nudDestreza.Value);
+                Guardar.Close();
+                Guardar.Dispose();
             }
         }
     }
