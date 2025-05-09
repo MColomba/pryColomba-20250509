@@ -57,6 +57,7 @@
             this.picSimbolo.Location = new System.Drawing.Point(12, 70);
             this.picSimbolo.Name = "picSimbolo";
             this.picSimbolo.Size = new System.Drawing.Size(551, 368);
+            this.picSimbolo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSimbolo.TabIndex = 2;
             this.picSimbolo.TabStop = false;
             // 
