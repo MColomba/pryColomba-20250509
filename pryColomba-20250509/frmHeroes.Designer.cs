@@ -126,7 +126,7 @@
             // 
             // nudDestreza
             // 
-            this.nudDestreza.Location = new System.Drawing.Point(79, 71);
+            this.nudDestreza.Location = new System.Drawing.Point(80, 72);
             this.nudDestreza.Maximum = new decimal(new int[] {
             10,
             0,
