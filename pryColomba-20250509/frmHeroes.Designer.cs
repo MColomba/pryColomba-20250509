@@ -50,6 +50,7 @@
             this.cmbHeroes.Name = "cmbHeroes";
             this.cmbHeroes.Size = new System.Drawing.Size(121, 21);
             this.cmbHeroes.TabIndex = 1;
+            this.cmbHeroes.SelectedIndexChanged += new System.EventHandler(this.cmbHeroes_SelectedIndexChanged);
             // 
             // picSimbolo
             // 
